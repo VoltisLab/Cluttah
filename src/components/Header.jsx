@@ -15,17 +15,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
+    <header className="bg-white shadow-sm border-b border-slate-100 sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-emerald-600 to-amber-600 rounded-xl flex items-center justify-center group-hover:from-emerald-700 group-hover:to-amber-700 transition-all duration-300 shadow-lg">
+              <div className="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center group-hover:bg-slate-800 transition-colors">
                 <Truck className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="text-xl font-bold bg-gradient-to-r from-emerald-700 to-amber-700 bg-clip-text text-transparent">CLUTTAH</div>
+                <div className="text-xl font-bold text-slate-900">CLUTTAH</div>
                 <div className="text-xs text-slate-500 -mt-1 tracking-wide">PREMIUM CLEARANCE</div>
               </div>
             </div>
@@ -35,19 +35,19 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <div className="relative">
               <button
-                className="flex items-center text-slate-600 hover:text-slate-800 font-medium transition-colors"
+                className="flex items-center text-slate-600 hover:text-slate-900 font-medium transition-colors"
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
               >
                 Our Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
                   {serviceLinks.map((service) => (
                     <Link
                       key={service.path}
                       to={service.path}
-                      className="block px-4 py-2 text-sm text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors"
+                      className="block px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors"
                       onClick={() => setIsServicesOpen(false)}
                     >
                       {service.name}
@@ -56,24 +56,24 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link to="/how-it-works" className="text-slate-600 hover:text-slate-800 font-medium transition-colors">
+            <Link to="/how-it-works" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
               How it works
             </Link>
-            <Link to="/faq" className="text-slate-600 hover:text-slate-800 font-medium transition-colors">
+            <Link to="/faq" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
               FAQ
             </Link>
-            <Link to="/about-us" className="text-slate-600 hover:text-slate-800 font-medium transition-colors">
+            <Link to="/about-us" className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
               About Us
             </Link>
           </nav>
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
-            <button className="text-slate-600 hover:text-slate-800 font-medium transition-colors">
+            <button className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
               LOG IN
             </button>
             <Button 
-              className="bg-gradient-to-r from-emerald-600 to-amber-600 hover:from-emerald-700 hover:to-amber-700 text-white font-bold px-6 py-2 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-2 rounded-xl transition-colors"
               onClick={() => navigate('/contact')}
             >
               Contact Us

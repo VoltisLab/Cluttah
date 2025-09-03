@@ -4,21 +4,18 @@ import { Facebook, Twitter, Instagram, Linkedin, Truck } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 text-white relative overflow-hidden">
-      {/* Decorative gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 via-amber-600/10 to-orange-600/10"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-emerald-600 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
-                <Truck className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center">
+                <Truck className="w-5 h-5 text-slate-900" />
               </div>
               <div>
-                <div className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">CLUTTAH</div>
-                <div className="text-xs text-slate-300 tracking-wide">PREMIUM CLEARANCE</div>
+                <div className="text-xl font-bold text-white">CLUTTAH</div>
+                <div className="text-xs text-slate-400 tracking-wide">PREMIUM CLEARANCE</div>
               </div>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed">
