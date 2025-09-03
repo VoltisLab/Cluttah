@@ -6,52 +6,52 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "How can I trust Cluttah™?",
-      answer: "With over 150,000 verified happy customers and over 18,000+ verified Trustpilot Reviews, you can book your clearance confidently with us. We are fully insured and registered with the Environment Agency."
+      question: "Can I trust you?",
+      answer: "150,000+ happy customers and 18,000+ five-star reviews. We're fully insured and Environment Agency registered."
     },
     {
-      question: "How much will my rubbish removal cost?",
-      answer: "Our prices start from £54 for single items and £59 for rubbish clearance. We offer fixed pricing with no hidden fees. Get an instant quote through our online booking system or call us for a personalized quote."
+      question: "What does it cost?",
+      answer: "From £54 for single items, £59 for rubbish clearance. Fixed prices - no hidden fees. Get instant quote online."
     },
     {
-      question: "What happens to the waste after my removal?",
-      answer: "We are committed to responsible waste disposal with a 95% recycling rate. We recycle and upcycle wherever possible, and all waste is disposed of in accordance with Environment Agency regulations."
+      question: "What happens to my waste?",
+      answer: "95% gets recycled or donated to charity. Everything is disposed of legally with full documentation."
     },
     {
-      question: "What are your hours of operation?",
-      answer: "We are open 7 days a week. Our customer service team is available from 7AM to 8PM. We also offer same-day service for urgent collections."
+      question: "When are you open?",
+      answer: "7 days a week, 7AM-8PM. Same-day service available in most areas."
     },
     {
-      question: "Does my waste need to be bagged?",
-      answer: "No, you don't need to bag your waste. Our professional team will handle all the collection and sorting. Just ensure items are accessible for our team to collect safely."
+      question: "Do I need to bag everything?",
+      answer: "No. Our team handles all sorting and bagging. Just make sure items are accessible."
     },
     {
-      question: "What is your cancellation policy?",
-      answer: "We offer flexible cancellation. You can cancel or reschedule your booking up to 2 hours before your scheduled collection time without any charges."
+      question: "Can I cancel?",
+      answer: "Yes. Free cancellation up to 2 hours before collection time."
     },
     {
-      question: "How quickly can you collect?",
-      answer: "We offer same-day service in most areas. Book online or call us, and we can often collect within hours of your booking, subject to availability in your area."
+      question: "How fast can you collect?",
+      answer: "Same-day service in most areas. Often within hours of booking."
     },
     {
-      question: "My items are reusable, can you reuse any of my waste?",
-      answer: "Absolutely! We prioritize reuse and recycling. Items in good condition are donated to local charities or recycled appropriately. This is part of our commitment to environmental responsibility."
+      question: "Do you donate reusable items?",
+      answer: "Yes. Good condition items go to local charities. Part of our 95% recycling commitment."
     },
     {
-      question: "Will you come upstairs and remove from inside?",
-      answer: "Yes, our two-person team will collect items from inside your property, including upstairs. We provide a full service to make the process as convenient as possible for you."
+      question: "Do you come inside?",
+      answer: "Yes. Our 2-person team collects from anywhere in your property, including upstairs."
     },
     {
-      question: "Are you licensed and insured?",
-      answer: "Yes, we are fully licensed waste carriers registered with the Environment Agency and carry comprehensive public liability insurance. All our documentation is available upon request."
+      question: "Are you licensed?",
+      answer: "Fully licensed waste carriers with complete insurance. All documentation provided."
     },
     {
-      question: "How do I change or add items to my booking?",
-      answer: "You can modify your booking by calling our customer service team or using our online chat. We can add items or change collection details up to 2 hours before your scheduled appointment."
+      question: "Can I change my booking?",
+      answer: "Yes. Call us or use live chat. Changes accepted up to 2 hours before collection."
     },
     {
-      question: "Do I have to be at home for my collection?",
-      answer: "Not necessarily. If items are accessible (e.g., in your front garden or garage), we can collect without you being present. We'll provide updates via text and email throughout the process."
+      question: "Do I need to be home?",
+      answer: "Not if items are accessible (front garden, garage). We'll text updates throughout."
     }
   ];
 
@@ -69,13 +69,13 @@ const FAQSection = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Rubbish & Waste Removal FAQs
+            Quick Answers
           </h2>
           <p className="text-xl text-slate-600 mb-4">
             Fast. Reliable. Professional.
           </p>
           <p className="text-lg text-slate-600">
-            We are open 7 days a week over the telephone, email, live chat, or WhatsApp.
+            Open 7 days: phone, email, chat, WhatsApp
           </p>
         </div>
 
@@ -120,23 +120,23 @@ const FAQSection = () => {
           
           <div className="relative z-10">
             <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-              Still have questions?
+              Still Got Questions?
             </h3>
             <p className="text-slate-600 mb-6">
-              Our dedicated customer support team is here to help you 7 days a week.
+              We're here 7 days a week to help
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:08000119492" 
                 className="bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
               >
-                📞 Call 0800 011 9492
+                📞 Call Now
               </a>
               <a 
                 href="mailto:hi@cluttah.co.uk" 
                 className="bg-white hover:bg-slate-50 text-slate-900 font-medium py-3 px-6 rounded-xl border border-slate-200 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
               >
-                ✉️ Email Us
+                ✉️ Email
               </a>
               <a 
                 href="https://api.whatsapp.com/send/?phone=447897023771" 

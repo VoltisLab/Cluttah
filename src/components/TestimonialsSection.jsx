@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-slate-900 mb-6">
-            Check our 18,000+ verified Trustpilot reviews
+            Real Reviews
           </h2>
           <div className="flex items-center justify-center mb-8 animate-bounce">
             <div className="flex items-center bg-green-600 text-white px-4 py-2 rounded-lg mr-4 hover:scale-110 transition-transform duration-300">
@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
               ))}
             </div>
             <span className="ml-3 text-lg font-semibold text-slate-700">
-              4.8 out of 5 star rating
+              18,000+ Reviews
             </span>
           </div>
         </div>
@@ -120,17 +120,17 @@ const TestimonialsSection = () => {
             <div className="absolute bottom-4 right-6 w-5 h-5 bg-slate-300/30 rounded-full animate-pulse delay-500"></div>
             
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-slate-900 mb-4">Trusted by over 150,000+ Customers</h3>
+              <h3 className="text-3xl font-bold text-slate-900 mb-4">150,000+ Happy Customers</h3>
               <div className="flex items-center justify-center mb-6">
                 <div className="bg-green-600 text-white px-4 py-2 rounded-lg mr-4 hover:scale-110 transition-transform duration-300">
                   <Star className="w-5 h-5 fill-current inline mr-2" />
                   <span className="font-semibold">Excellent</span>
                 </div>
                 <span className="text-lg font-semibold text-slate-700">
-                  4.8 out of 5 star rating on Trustpilot
+                  4.8/5 on Trustpilot
                 </span>
               </div>
-              <p className="text-slate-600">Based on <strong>19,581 reviews</strong></p>
+              <p className="text-slate-600">Based on <strong>19,581 verified reviews</strong></p>
             </div>
           </div>
         </div>
