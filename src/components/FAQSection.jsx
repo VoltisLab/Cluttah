@@ -60,9 +60,14 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-white py-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <div className="bg-white py-20 relative overflow-hidden">
+      {/* Floating Background Elements */}
+      <div className="absolute top-0 right-0 w-80 h-80 bg-slate-100/40 rounded-full blur-3xl animate-pulse translate-x-40 -translate-y-40"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-slate-200/30 rounded-full blur-3xl animate-pulse delay-1000 -translate-x-32 translate-y-32"></div>
+      <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-slate-150/20 rounded-full blur-2xl animate-bounce delay-500"></div>
+      
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
             Rubbish & Waste Removal FAQs
           </h2>
@@ -76,25 +81,27 @@ const FAQSection = () => {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
+            <div key={index} className="bg-slate-50/80 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-100 hover:shadow-lg transition-all duration-300 transform hover:scale-102 animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
               <button
-                className="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-inset"
+                className="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-inset hover:bg-slate-100/50 transition-colors duration-200"
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex justify-between items-center">
                   <h3 className="text-lg font-semibold text-slate-900 pr-4">
                     {faq.question}
                   </h3>
-                  {openFAQ === index ? (
-                    <ChevronUp className="h-5 w-5 text-slate-500 flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-slate-500 flex-shrink-0" />
-                  )}
+                  <div className="flex-shrink-0">
+                    {openFAQ === index ? (
+                      <ChevronUp className="h-5 w-5 text-slate-500 transform hover:scale-110 transition-all duration-200" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-slate-500 transform hover:scale-110 transition-all duration-200" />
+                    )}
+                  </div>
                 </div>
               </button>
               
               {openFAQ === index && (
-                <div className="px-6 pb-4 bg-white">
+                <div className="px-6 pb-4 bg-white/90 backdrop-blur-sm animate-fade-in-up">
                   <p className="text-slate-600 leading-relaxed">
                     {faq.answer}
                   </p>
@@ -105,35 +112,67 @@ const FAQSection = () => {
         </div>
 
         {/* Contact CTA */}
-        <div className="mt-16 text-center bg-slate-50 rounded-2xl p-8 border border-slate-100">
-          <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-            Still have questions?
-          </h3>
-          <p className="text-slate-600 mb-6">
-            Our dedicated customer support team is here to help you 7 days a week.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:08000119492" 
-              className="bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 px-6 rounded-xl transition-colors inline-flex items-center justify-center"
-            >
-              📞 Call 0800 011 9492
-            </a>
-            <a 
-              href="mailto:hi@cluttah.co.uk" 
-              className="bg-white hover:bg-slate-50 text-slate-900 font-medium py-3 px-6 rounded-xl border border-slate-200 transition-colors inline-flex items-center justify-center"
-            >
-              ✉️ Email Us
-            </a>
-            <a 
-              href="https://api.whatsapp.com/send/?phone=447897023771" 
-              className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-xl transition-colors inline-flex items-center justify-center"
-            >
-              💬 WhatsApp
-            </a>
+        <div className="mt-16 text-center bg-slate-50/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-100 relative overflow-hidden hover:shadow-lg transition-all duration-500 transform hover:scale-102 animate-fade-in-up delay-1200">
+          {/* Floating particles */}
+          <div className="absolute top-4 left-4 w-3 h-3 bg-slate-300/40 rounded-full animate-ping"></div>
+          <div className="absolute bottom-4 right-4 w-2 h-2 bg-slate-400/50 rounded-full animate-pulse delay-300"></div>
+          <div className="absolute top-8 right-8 w-4 h-4 bg-slate-200/60 rounded-full animate-bounce delay-700"></div>
+          
+          <div className="relative z-10">
+            <h3 className="text-2xl font-semibold text-slate-900 mb-4">
+              Still have questions?
+            </h3>
+            <p className="text-slate-600 mb-6">
+              Our dedicated customer support team is here to help you 7 days a week.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:08000119492" 
+                className="bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
+              >
+                📞 Call 0800 011 9492
+              </a>
+              <a 
+                href="mailto:hi@cluttah.co.uk" 
+                className="bg-white hover:bg-slate-50 text-slate-900 font-medium py-3 px-6 rounded-xl border border-slate-200 transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
+              >
+                ✉️ Email Us
+              </a>
+              <a 
+                href="https://api.whatsapp.com/send/?phone=447897023771" 
+                className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 inline-flex items-center justify-center transform hover:scale-105 hover:shadow-lg"
+              >
+                💬 WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in-up {
+          animation: fade-in-up 0.6s ease-out forwards;
+        }
+        
+        .delay-1200 {
+          animation-delay: 1.2s;
+        }
+        
+        .hover\\:scale-102:hover {
+          transform: scale(1.02);
+        }
+      `}</style>
     </div>
   );
 };
