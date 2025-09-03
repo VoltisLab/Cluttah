@@ -98,7 +98,8 @@ const BookingNotifications = () => {
     return {
       id: Date.now(),
       name,
-      service,
+      service: service.name,
+      price: service.price,
       area,
       time
     };
