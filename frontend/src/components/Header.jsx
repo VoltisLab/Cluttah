@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 
 const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -15,24 +15,25 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
+    <header className="bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100/50 sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-18">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-5 h-5 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm6 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
-                </svg>
+          <Link to="/" className="flex items-center group">
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                  <Sparkles className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></div>
               </div>
               <div>
-                <div className="text-xl font-bold text-gray-900">LITTA</div>
-                <div className="text-xs text-gray-500 -mt-1">SUSTAINABLE JUNK REMOVAL</div>
+                <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  CLUTTA
+                </div>
+                <div className="text-xs font-medium text-gray-500 -mt-1 tracking-wide">
+                  PREMIUM CLEARANCE
+                </div>
               </div>
             </div>
           </Link>
@@ -41,16 +42,16 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <div className="relative">
               <button
-                className="flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                className="flex items-center text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-105"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 Our Services
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300" />
               </button>
               {isServicesOpen && (
                 <div
-                  className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"
+                  className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-gray-200/50 py-3 z-50 transform opacity-100 scale-100 transition-all duration-300"
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
@@ -58,7 +59,7 @@ const Header = () => {
                     <Link
                       key={service.path}
                       to={service.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                      className="block px-5 py-3 text-sm text-gray-700 hover:text-indigo-600 hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 mx-2 rounded-lg"
                     >
                       {service.name}
                     </Link>
@@ -66,24 +67,24 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link to="/how-it-works" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+            <Link to="/how-it-works" className="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-105">
               How it works
             </Link>
-            <Link to="/faq" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+            <Link to="/faq" className="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-105">
               FAQ
             </Link>
-            <Link to="/about-us" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+            <Link to="/about-us" className="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-105">
               About Us
             </Link>
           </nav>
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+            <button className="text-gray-700 hover:text-indigo-600 font-medium transition-all duration-300 hover:scale-105">
               LOG IN
             </button>
             <Button 
-              className="bg-pink-500 hover:bg-pink-600 text-white font-medium px-6 py-2 rounded-lg transition-colors"
+              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-medium px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               onClick={() => navigate('/contact')}
             >
               Contact Us
