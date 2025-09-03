@@ -2,17 +2,18 @@ import React from "react";
 import Layout from "../Layout";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import { ArrowRight, Home, TreePine, Building, Package } from "lucide-react";
+import { ArrowRight, Home, TreePine, Building, Package, Sparkles, Crown } from "lucide-react";
 
 const ServicesPage = () => {
   const services = [
     {
-      title: "House Clearance",
-      description: "Complete home clearance service for furniture, appliances, and household items. Our two-person teams handle all the heavy lifting.",
+      title: "Luxury House Clearance",
+      description: "Complete premium home clearance service with white-glove treatment. Our professional teams handle everything with the utmost care and discretion.",
       icon: <Home className="h-8 w-8" />,
-      features: ["Full house clearance", "Estate clearance", "Furniture removal", "Appliance disposal"],
+      features: ["Full luxury clearance", "Estate management", "Antique handling", "Premium disposal"],
       path: "/services/house-clearance",
-      image: "https://images.unsplash.com/photo-1558618666-fbd76c1d5c80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+      image: "https://images.unsplash.com/photo-1558618666-fbd76c1d5c80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Garden Clearance",
