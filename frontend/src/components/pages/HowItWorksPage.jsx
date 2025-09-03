@@ -30,9 +30,9 @@ const HowItWorksPage = () => {
     {
       number: "04",
       title: "Responsible Disposal",
-      description: "We recycle up to 90% of collected waste and provide digital waste transfer notes for transparency.",
+      description: "We recycle up to 95% of collected waste and provide digital waste transfer notes for transparency.",
       icon: <Recycle className="h-8 w-8" />,
-      details: ["90% recycling rate", "Digital waste notes", "Licensed disposal", "Environmental compliance"]
+      details: ["95% recycling rate", "Digital waste notes", "Licensed disposal", "Environmental compliance"]
     }
   ];
 
@@ -45,12 +45,12 @@ const HowItWorksPage = () => {
     {
       icon: <Shield className="h-6 w-6" />,
       title: "Fully Insured",
-      description: "£2 million public liability insurance for complete peace of mind"
+      description: "£5 million public liability insurance for complete peace of mind"
     },
     {
       icon: <Star className="h-6 w-6" />,
       title: "5-Star Service",
-      description: "Over 18,000 verified reviews with excellent customer satisfaction"
+      description: "Over 25,000 verified reviews with excellent customer satisfaction"
     }
   ];
 
@@ -60,10 +60,10 @@ const HowItWorksPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
               How It Works
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Getting rid of your unwanted items has never been easier. 
               Our simple 4-step process ensures a hassle-free experience from start to finish.
             </p>
@@ -77,25 +77,25 @@ const HowItWorksPage = () => {
               }`}>
                 {/* Content */}
                 <div className="flex-1">
-                  <div className="bg-white p-8 rounded-lg shadow-lg">
+                  <div className="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
                     <div className="flex items-center mb-6">
-                      <div className="text-6xl font-bold text-teal-100 mr-4">
+                      <div className="text-6xl font-bold text-slate-200 mr-4">
                         {step.number}
                       </div>
-                      <div className="p-3 bg-teal-100 rounded-lg text-teal-600">
+                      <div className="p-3 bg-slate-100 rounded-lg text-slate-600">
                         {step.icon}
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-slate-800 mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 mb-6 text-lg leading-relaxed">
+                    <p className="text-slate-600 mb-6 text-lg leading-relaxed">
                       {step.description}
                     </p>
                     <ul className="space-y-2">
                       {step.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="flex items-center text-gray-600">
-                          <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                        <li key={detailIndex} className="flex items-center text-slate-600">
+                          <div className="w-2 h-2 bg-slate-600 rounded-full mr-3"></div>
                           {detail}
                         </li>
                       ))}
@@ -105,7 +105,7 @@ const HowItWorksPage = () => {
                 
                 {/* Image */}
                 <div className="flex-1">
-                  <div className="aspect-square rounded-lg overflow-hidden bg-gray-200">
+                  <div className="aspect-square rounded-lg overflow-hidden bg-slate-200">
                     <img
                       src={`https://images.unsplash.com/photo-${
                         index === 0 ? '1551434678-e185b29c5a19' : 
@@ -123,20 +123,20 @@ const HowItWorksPage = () => {
           </div>
 
           {/* Benefits Section */}
-          <div className="bg-gray-50 rounded-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Why Choose Litta?
+          <div className="bg-slate-50 rounded-lg p-8 mb-16">
+            <h2 className="text-3xl font-bold text-center text-slate-800 mb-12">
+              Why Choose Cluttah?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="p-4 bg-teal-100 rounded-full text-teal-600 w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <div className="p-4 bg-slate-100 rounded-full text-slate-600 w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-slate-600">
                     {benefit.description}
                   </p>
                 </div>
@@ -146,14 +146,14 @@ const HowItWorksPage = () => {
 
           {/* CTA */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-slate-800 mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-slate-600 mb-8">
               Book your collection now and experience the UK's leading waste removal service
             </p>
             <Link to="/">
-              <Button className="bg-pink-500 hover:bg-pink-600 text-white font-medium px-8 py-4 text-lg">
+              <Button className="bg-slate-800 hover:bg-slate-700 text-white font-medium px-8 py-4 text-lg">
                 Get Free Quote
               </Button>
             </Link>

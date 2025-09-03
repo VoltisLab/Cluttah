@@ -55,7 +55,7 @@ const FAQPage = () => {
       faqs: [
         {
           question: "How much waste do you recycle?",
-          answer: "We recycle up to 90% of all collected waste through our network of licensed recycling facilities. We're committed to diverting as much waste as possible from landfill."
+          answer: "We recycle up to 95% of all collected waste through our network of licensed recycling facilities. We're committed to diverting as much waste as possible from landfill."
         },
         {
           question: "Do you provide waste transfer notes?",
@@ -84,10 +84,10 @@ const FAQPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-slate-600">
               Find answers to common questions about our waste removal services. 
               Can't find what you're looking for? Contact us directly.
             </p>
@@ -96,33 +96,33 @@ const FAQPage = () => {
           {/* FAQ Categories */}
           <div className="space-y-8">
             {faqCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-teal-50 px-6 py-4 border-b border-teal-100">
-                  <h2 className="text-2xl font-bold text-gray-900">{category.title}</h2>
+              <div key={categoryIndex} className="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200">
+                <div className="bg-slate-50 px-6 py-4 border-b border-slate-200">
+                  <h2 className="text-2xl font-bold text-slate-800">{category.title}</h2>
                 </div>
-                <div className="divide-y divide-gray-200">
+                <div className="divide-y divide-slate-200">
                   {category.faqs.map((faq, faqIndex) => {
                     const isOpen = openFAQ === `${categoryIndex}-${faqIndex}`;
                     return (
                       <div key={faqIndex}>
                         <button
-                          className="w-full px-6 py-4 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors"
+                          className="w-full px-6 py-4 text-left hover:bg-slate-50 focus:outline-none focus:bg-slate-50 transition-colors"
                           onClick={() => toggleFAQ(categoryIndex, faqIndex)}
                         >
                           <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                            <h3 className="text-lg font-semibold text-slate-800 pr-4">
                               {faq.question}
                             </h3>
                             {isOpen ? (
-                              <ChevronUp className="h-5 w-5 text-gray-500 flex-shrink-0" />
+                              <ChevronUp className="h-5 w-5 text-slate-500 flex-shrink-0" />
                             ) : (
-                              <ChevronDown className="h-5 w-5 text-gray-500 flex-shrink-0" />
+                              <ChevronDown className="h-5 w-5 text-slate-500 flex-shrink-0" />
                             )}
                           </div>
                         </button>
                         {isOpen && (
                           <div className="px-6 pb-4">
-                            <p className="text-gray-600 leading-relaxed">
+                            <p className="text-slate-600 leading-relaxed">
                               {faq.answer}
                             </p>
                           </div>
@@ -136,22 +136,22 @@ const FAQPage = () => {
           </div>
 
           {/* Contact CTA */}
-          <div className="mt-16 text-center bg-gray-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="mt-16 text-center bg-slate-50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-slate-800 mb-4">
               Still Have Questions?
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-slate-600 mb-6">
               Our friendly customer service team is here to help with any questions you might have.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
-                <Button className="bg-teal-600 hover:bg-teal-700 text-white font-medium px-6 py-3">
+                <Button className="bg-slate-800 hover:bg-slate-700 text-white font-medium px-6 py-3">
                   Contact Us
                 </Button>
               </Link>
-              <a href="tel:08001234567">
-                <Button variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50 px-6 py-3">
-                  Call: 0800 123 4567
+              <a href="tel:0800258824">
+                <Button variant="outline" className="border-slate-800 text-slate-800 hover:bg-slate-50 px-6 py-3">
+                  Call: 0800 CLUTTAH
                 </Button>
               </a>
             </div>
