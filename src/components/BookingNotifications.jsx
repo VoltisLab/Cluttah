@@ -6,14 +6,14 @@ const BookingNotifications = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const services = [
-    'Sofa Collection',
-    'Furniture Removal',
-    'Rubbish Clearance',
-    'Appliance Removal',
-    'Office Clearance',
-    'House Clearance',
-    'Garden Clearance',
-    'Mattress Collection'
+    { name: 'Sofa Collection', price: '£74' },
+    { name: 'Furniture Removal', price: '£54' },
+    { name: 'Rubbish Clearance', price: '£59' },
+    { name: 'Appliance Removal', price: '£54' },
+    { name: 'Office Clearance', price: '£79' },
+    { name: 'House Clearance', price: '£79' },
+    { name: 'Garden Clearance', price: '£65' },
+    { name: 'Mattress Collection', price: '£64' }
   ];
 
   const ukAreas = [
