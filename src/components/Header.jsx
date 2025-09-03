@@ -21,11 +21,11 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
-                <Truck className="w-4 h-4 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-emerald-600 to-amber-600 rounded-xl flex items-center justify-center group-hover:from-emerald-700 group-hover:to-amber-700 transition-all duration-300 shadow-lg">
+                <Truck className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="text-xl font-bold text-slate-800">CLUTTAH</div>
+                <div className="text-xl font-bold bg-gradient-to-r from-emerald-700 to-amber-700 bg-clip-text text-transparent">CLUTTAH</div>
                 <div className="text-xs text-slate-500 -mt-1 tracking-wide">PREMIUM CLEARANCE</div>
               </div>
             </div>
