@@ -5,33 +5,33 @@ const WhyChooseUsSection = () => {
   const features = [
     {
       icon: <CreditCard className="w-8 h-8 text-slate-600" />,
-      title: "Fixed Pricing",
-      description: "Transparent, upfront pricing with no hidden fees"
+      title: "Fixed Prices",
+      description: "No surprises. Price is the price."
     },
     {
       icon: <Shield className="w-8 h-8 text-slate-600" />,
-      title: "Fully Licensed & Insured", 
-      description: "Environment Agency registered with full public liability"
+      title: "Fully Insured", 
+      description: "Licensed waste carriers. Full cover."
     },
     {
       icon: <Phone className="w-8 h-8 text-slate-600" />,
-      title: "Live Customer Support",
-      description: "7 days a week customer service and live chat support"
+      title: "Live Support",
+      description: "Real people. 7 days a week."
     },
     {
       icon: <Clock className="w-8 h-8 text-slate-600" />,
-      title: "Same Day Service",
-      description: "Book today, cleared today with our rapid response team"
+      title: "Same Day",
+      description: "Book today. Cleared today."
     }
   ];
 
   const comparisonFeatures = [
-    "Secure online payment system",
-    "Select a convenient time slot", 
+    "Online payment system",
+    "Choose your time slot", 
     "Live driver tracking",
-    "Digital waste transfer note",
-    "Guaranteed Public Liability cover and waste Carrier Licence",
-    "Guaranteed waste carrier licence"
+    "Digital receipt",
+    "Full insurance cover",
+    "Waste carrier licence"
   ];
 
   return (
@@ -52,22 +52,22 @@ const WhyChooseUsSection = () => {
             
             <div className="relative z-10">
               <h2 className="text-4xl font-bold text-slate-900 mb-8">
-                Reinventing the future of rubbish disposal in the UK
+                Cleaner. Greener. Better.
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 transform hover:-translate-y-1">
                   <Truck className="w-6 h-6 text-slate-500 mr-3" />
-                  <span className="text-lg font-medium text-slate-700">Reduced vehicle emissions</span>
+                  <span className="text-lg font-medium text-slate-700">Low emissions</span>
                 </div>
                 <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 transform hover:-translate-y-1">
                   <svg className="w-6 h-6 text-slate-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
-                  <span className="text-lg font-medium text-slate-700">We recycle and upcycle</span>
+                  <span className="text-lg font-medium text-slate-700">95% recycled</span>
                 </div>
                 <div className="flex items-center justify-center hover:scale-110 transition-all duration-300 transform hover:-translate-y-1">
                   <Shield className="w-6 h-6 text-slate-500 mr-3" />
-                  <span className="text-lg font-medium text-slate-700">Professional & fully insured</span>
+                  <span className="text-lg font-medium text-slate-700">Fully licensed</span>
                 </div>
               </div>
             </div>
@@ -77,10 +77,10 @@ const WhyChooseUsSection = () => {
         {/* Why Choose Cluttah */}
         <div className="mb-20 animate-fade-in-up delay-200">
           <h2 className="text-4xl font-bold text-slate-900 text-center mb-4">
-            Why choose Cluttah?
+            Why Choose Cluttah?
           </h2>
           <p className="text-xl text-slate-600 text-center mb-12">
-            Reasons why 100,000 happy customers have chosen us
+            100,000+ customers can't be wrong
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -104,14 +104,14 @@ const WhyChooseUsSection = () => {
           
           <div className="relative z-10">
             <h3 className="text-2xl font-semibold text-slate-900 text-center mb-8">
-              What makes Cluttah different?
+              Cluttah vs Others
             </h3>
             
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-3 gap-4 mb-6">
                 <div></div>
-                <div className="text-center font-medium text-slate-600 bg-white rounded-lg py-2 hover:scale-105 transition-transform duration-200">CLASSIC PURCHASE</div>
-                <div className="text-center font-medium text-slate-900 bg-white rounded-lg py-2 hover:scale-105 transition-transform duration-200">CLUTTAH</div>
+                <div className="text-center font-medium text-slate-600 bg-white rounded-lg py-2 hover:scale-105 transition-transform duration-200">Others</div>
+                <div className="text-center font-medium text-slate-900 bg-white rounded-lg py-2 hover:scale-105 transition-transform duration-200">Cluttah</div>
               </div>
               
               {comparisonFeatures.map((feature, index) => (
@@ -140,21 +140,21 @@ const WhyChooseUsSection = () => {
           
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h2 className="text-3xl font-bold mb-6">
-              UK Based Team, Fully Compliant, Registered and Insured
+              Licensed. Insured. Trusted.
             </h2>
             <p className="text-xl leading-relaxed mb-8 text-slate-200">
-              With over 150,000 verified happy customers and over 18,000+ verified Trustpilot Reviews, 
-              you can book your clearance confidently with us. Through our online booking system, 
-              you can secure a same-day rubbish collection in a few clicks.
+              150,000+ happy customers. 18,000+ five-star reviews. 
+              Book with confidence - we're fully licensed waste carriers 
+              with complete insurance cover.
             </p>
             <p className="text-lg leading-relaxed mb-8 text-slate-300">
-              Cluttah is dedicated to combating illegal fly-tipping, safeguarding our environment 
-              one collection at a time. We are fully insured and registered with the Environment Agency: 
-              we will ensure your waste is responsibly recycled.
+              We fight illegal fly-tipping and protect the environment. 
+              Every job comes with a digital waste transfer certificate 
+              so you know your waste is handled legally.
             </p>
             <div className="bg-white rounded-xl p-6 text-slate-900 transform hover:scale-105 transition-all duration-300 hover:shadow-lg">
               <p className="text-xl font-semibold">
-                For an immediate quote please call our dedicated quote team on{" "}
+                Need a quote? Call now:{" "}
                 <a href="tel:0800 011 9492" className="text-slate-900 hover:underline hover:scale-110 inline-block transition-all duration-200">
                   📞 0800 011 9492
                 </a>

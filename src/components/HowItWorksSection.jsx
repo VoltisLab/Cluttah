@@ -5,28 +5,28 @@ const HowItWorksSection = () => {
   const steps = [
     {
       number: "1",
-      title: "Book online in 60 Seconds",
-      description: "Pre-book your service and team in a few clicks with our easy to use online booking and payment system",
+      title: "Book in 60 seconds",
+      description: "Quick online booking with instant pricing and secure payment",
       icon: <Clock className="w-8 h-8 text-slate-600" />
     },
     {
       number: "2", 
-      title: "We clear safely & ethically",
-      description: "Get Live Driver Tracking, Our 2 Man collection team will arrive & clear your waste. You'll get a Digital Waste Transfer note.",
+      title: "We do the work",
+      description: "2-person team arrives on time, clears everything safely, gives you receipt",
       icon: <CheckCircle className="w-8 h-8 text-slate-600" />
     },
     {
       number: "3",
-      title: "Another happy customer", 
-      description: "Once we leave, you will be a happy customer. Our dedicated team will contact you to check the service went well.",
+      title: "Job done", 
+      description: "Your space is clear, waste is recycled responsibly, you're happy",
       icon: <Phone className="w-8 h-8 text-slate-600" />
     }
   ];
 
   const features = [
-    "Live Customer Support",
-    "Dedicated Phone Line", 
-    "Same Day Service"
+    "Live Support",
+    "Same Day Service", 
+    "Track Your Team"
   ];
 
   return (
@@ -39,9 +39,9 @@ const HowItWorksSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Title */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <p className="text-base font-medium text-slate-600 mb-2">Ready. Set. Clear.</p>
+          <p className="text-base font-medium text-slate-600 mb-2">Simple Process</p>
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            How Cluttah Works in 3 Simple Steps
+            How It Works
           </h2>
         </div>
 
@@ -95,10 +95,10 @@ const HowItWorksSection = () => {
             <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/3 rounded-full blur-lg animate-bounce delay-300"></div>
             
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4 animate-pulse">Ready to get started?</h3>
-              <p className="text-xl mb-6 text-slate-200">Book your clearance service today and experience the Cluttah difference!</p>
+              <h3 className="text-3xl font-bold mb-4 animate-pulse">Ready to Clear?</h3>
+              <p className="text-xl mb-6 text-slate-200">Book now. Cleared today.</p>
               <button className="bg-white text-slate-900 font-bold py-3 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 hover:-translate-y-1">
-                Get Your Quote Now 🚀
+                Get Quote Now ⚡
               </button>
             </div>
           </div>
