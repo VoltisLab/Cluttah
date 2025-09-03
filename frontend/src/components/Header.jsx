@@ -1,16 +1,25 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ChevronDown } from "lucide-react";
 
 const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const serviceLinks = [
+    { name: "House Clearance", path: "/services/house-clearance" },
+    { name: "Garden Clearance", path: "/services/garden-clearance" },
+    { name: "Office Clearance", path: "/services/office-clearance" },
+    { name: "Single Items", path: "/services/single-items" }
+  ];
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100">
+    <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center">
                 <svg
@@ -26,13 +35,13 @@ const Header = () => {
                 <div className="text-xs text-gray-500 -mt-1">SUSTAINABLE JUNK REMOVAL</div>
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <div className="relative">
               <button
-                className="flex items-center text-gray-700 hover:text-gray-900 font-medium"
+                className="flex items-center text-gray-700 hover:text-gray-900 font-medium transition-colors"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
@@ -45,24 +54,38 @@ const Header = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">House Clearance</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Garden Clearance</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Office Clearance</a>
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Single Items</a>
+                  {serviceLinks.map((service) => (
+                    <Link
+                      key={service.path}
+                      to={service.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">How it works</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">FAQ</a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">About Us</a>
+            <Link to="/how-it-works" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              How it works
+            </Link>
+            <Link to="/faq" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              FAQ
+            </Link>
+            <Link to="/about-us" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              About Us
+            </Link>
           </nav>
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-gray-900 font-medium">
+            <button className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
               LOG IN
             </button>
-            <Button className="bg-pink-500 hover:bg-pink-600 text-white font-medium px-6 py-2 rounded-lg">
+            <Button 
+              className="bg-pink-500 hover:bg-pink-600 text-white font-medium px-6 py-2 rounded-lg transition-colors"
+              onClick={() => navigate('/contact')}
+            >
               Contact Us
             </Button>
           </div>
