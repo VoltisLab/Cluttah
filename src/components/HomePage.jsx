@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
 import HeroSection from "./HeroSection";
+import ServicesSection from "./ServicesSection";
+import HowItWorksSection from "./HowItWorksSection";
+import WhyChooseUsSection from "./WhyChooseUsSection";
+import TestimonialsSection from "./TestimonialsSection";
 import CookieBanner from "./CookieBanner";
 
 const HomePage = () => {
@@ -21,6 +25,10 @@ const HomePage = () => {
   return (
     <Layout>
       <HeroSection />
+      <ServicesSection />
+      <HowItWorksSection />
+      <WhyChooseUsSection />
+      <TestimonialsSection />
       {showCookieBanner && (
         <CookieBanner onClose={() => setShowCookieBanner(false)} />
       )}
