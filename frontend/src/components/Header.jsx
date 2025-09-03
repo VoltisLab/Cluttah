@@ -25,7 +25,7 @@ const Header = () => {
                 <Truck className="w-4 h-4 text-white" />
               </div>
               <div>
-                <div className="text-xl font-bold text-slate-800">CLUTTA</div>
+                <div className="text-xl font-bold text-slate-800">CLUTTAH</div>
                 <div className="text-xs text-slate-500 -mt-1 tracking-wide">PREMIUM CLEARANCE</div>
               </div>
             </div>
