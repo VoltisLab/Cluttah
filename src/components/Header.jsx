@@ -73,7 +73,7 @@ const Header = () => {
               LOG IN
             </button>
             <Button 
-              className="bg-slate-800 hover:bg-slate-700 text-white font-medium px-6 py-2 rounded-lg transition-colors"
+              className="bg-gradient-to-r from-emerald-600 to-amber-600 hover:from-emerald-700 hover:to-amber-700 text-white font-bold px-6 py-2 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               onClick={() => navigate('/contact')}
             >
               Contact Us
