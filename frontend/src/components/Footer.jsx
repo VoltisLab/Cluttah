@@ -96,8 +96,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
             <div className="space-y-2 text-sm text-slate-300">
-              <p>📞 0800 CLUTTA (258882)</p>
-              <p>✉️ hello@clutta.co.uk</p>
+              <p>📞 0800 CLUTTAH (258824)</p>
+              <p>✉️ hello@cluttah.co.uk</p>
               <p>🕒 Mon-Sun: 7AM-8PM</p>
               <p>📍 UK Wide Coverage</p>
             </div>
