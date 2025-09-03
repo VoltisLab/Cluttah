@@ -158,7 +158,7 @@ const BookingNotifications = () => {
             <span className="text-blue-600">{currentNotification.name}</span> in {currentNotification.area}
           </p>
           <p className="text-slate-700 text-sm">
-            {currentNotification.service}
+            {currentNotification.service} • <span className="font-semibold text-green-600">{currentNotification.price}</span>
           </p>
           
           {/* Footer */}
