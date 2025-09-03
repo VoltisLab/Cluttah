@@ -67,10 +67,10 @@ const FAQSection = () => {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-emerald-700 via-amber-700 to-orange-700 bg-clip-text text-transparent mb-4">
             Rubbish & Waste Removal FAQs
           </h2>
-          <p className="text-xl text-slate-600">
+          <p className="text-xl bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent font-bold">
             Fast. Reliable. Professional.
           </p>
           <p className="text-lg text-slate-600 mt-4">
