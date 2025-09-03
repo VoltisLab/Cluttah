@@ -64,17 +64,17 @@ const HeroSection = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Stats Bar */}
-        <div className="flex justify-center items-center space-x-8 mb-12 bg-white/80 backdrop-blur-sm rounded-full py-3 px-6 mx-auto max-w-fit">
+        <div className="flex justify-center items-center space-x-8 mb-12 bg-white/90 backdrop-blur-sm rounded-full py-4 px-8 mx-auto max-w-fit shadow-lg border border-orange-100">
           <div className="flex items-center text-sm font-medium text-slate-700">
-            <Users className="h-4 w-4 mr-2 text-blue-600" />
+            <Users className="h-4 w-4 mr-2 text-emerald-600" />
             100K Happy customers
           </div>
           <div className="flex items-center text-sm font-medium text-slate-700">
-            <Truck className="h-4 w-4 mr-2 text-blue-600" />
+            <Truck className="h-4 w-4 mr-2 text-amber-600" />
             200,000+ Tonnes shifted
           </div>
           <div className="flex items-center text-sm font-medium text-slate-700">
-            <Star className="h-4 w-4 mr-2 text-blue-600" />
+            <Star className="h-4 w-4 mr-2 text-orange-500" />
             18,000+ Verified reviews
           </div>
         </div>
