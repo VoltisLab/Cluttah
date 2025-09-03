@@ -36,23 +36,19 @@ const Header = () => {
             <div className="relative">
               <button
                 className="flex items-center text-slate-600 hover:text-slate-800 font-medium transition-colors"
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
               >
                 Our Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
               {isServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                >
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                   {serviceLinks.map((service) => (
                     <Link
                       key={service.path}
                       to={service.path}
                       className="block px-4 py-2 text-sm text-slate-600 hover:text-slate-800 hover:bg-slate-50 transition-colors"
+                      onClick={() => setIsServicesOpen(false)}
                     >
                       {service.name}
                     </Link>
