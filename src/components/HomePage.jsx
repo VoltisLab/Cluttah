@@ -5,6 +5,7 @@ import ServicesSection from "./ServicesSection";
 import HowItWorksSection from "./HowItWorksSection";
 import WhyChooseUsSection from "./WhyChooseUsSection";
 import TestimonialsSection from "./TestimonialsSection";
+import FAQSection from "./FAQSection";
 import CookieBanner from "./CookieBanner";
 
 const HomePage = () => {
@@ -29,6 +30,7 @@ const HomePage = () => {
       <HowItWorksSection />
       <WhyChooseUsSection />
       <TestimonialsSection />
+      <FAQSection />
       {showCookieBanner && (
         <CookieBanner onClose={() => setShowCookieBanner(false)} />
       )}
