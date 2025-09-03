@@ -65,15 +65,15 @@ const HeroSection = () => {
         <div className="flex justify-center items-center space-x-12 mb-16 bg-white/90 backdrop-blur-sm rounded-2xl py-4 px-8 mx-auto max-w-fit shadow-lg border border-slate-100 animate-fade-in-up">
           <div className="flex items-center text-sm font-medium text-slate-600 hover:scale-105 transition-transform duration-300">
             <Users className="h-4 w-4 mr-2 text-slate-500" />
-            100K Happy customers
+            100K+ Happy Customers
           </div>
           <div className="flex items-center text-sm font-medium text-slate-600 hover:scale-105 transition-transform duration-300">
             <Truck className="h-4 w-4 mr-2 text-slate-500" />
-            200,000+ Tonnes shifted
+            200K+ Tonnes Cleared
           </div>
           <div className="flex items-center text-sm font-medium text-slate-600 hover:scale-105 transition-transform duration-300">
             <Star className="h-4 w-4 mr-2 text-slate-500" />
-            18,000+ Verified reviews
+            18K+ Five-Star Reviews
           </div>
         </div>
 
@@ -83,17 +83,18 @@ const HeroSection = () => {
             {/* Main Heading */}
             <div>
               <h1 className="text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6 animate-fade-in-up">
-                UK wide rubbish removal
+                Rubbish Cleared. 
+                <br />Done Right.
               </h1>
               <p className="text-xl text-slate-600 leading-relaxed animate-fade-in-up delay-200">
-                Same-day waste removal from a business unit or home
+                Same-day removal. Zero hassle.
               </p>
             </div>
 
             {/* Service Selection */}
             <div className="animate-fade-in-up delay-300">
               <h3 className="text-2xl font-semibold text-slate-900 mb-6">
-                What do you need help with?
+                What needs clearing?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div
@@ -112,8 +113,8 @@ const HeroSection = () => {
                         className="w-12 h-12 object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Pile of Junk</h4>
-                    <p className="text-sm text-slate-600">I have a pile of rubbish</p>
+                    <h4 className="font-semibold text-slate-900 mb-2">Big Clear-Out</h4>
+                    <p className="text-sm text-slate-600">Multiple items & boxes</p>
                   </div>
                 </div>
 
@@ -134,7 +135,7 @@ const HeroSection = () => {
                       />
                     </div>
                     <h4 className="font-semibold text-slate-900 mb-2">Single Items</h4>
-                    <p className="text-sm text-slate-600">I have specific items</p>
+                    <p className="text-sm text-slate-600">Sofa, fridge, or similar</p>
                   </div>
                 </div>
               </div>
@@ -144,15 +145,15 @@ const HeroSection = () => {
             <div className="flex items-center space-x-8 bg-white/90 backdrop-blur-sm rounded-xl p-4 border border-slate-100 shadow-lg animate-fade-in-up delay-400">
               <div className="flex items-center text-sm text-slate-600 hover:scale-110 transition-transform duration-300">
                 <Clock className="h-5 w-5 mr-2 text-slate-400" />
-                Same Day Service
+                Same Day
               </div>
               <div className="flex items-center text-sm text-slate-600 hover:scale-110 transition-transform duration-300">
                 <Shield className="h-5 w-5 mr-2 text-slate-400" />
-                Fully Licensed & Insured
+                Fully Insured
               </div>
               <div className="flex items-center text-sm text-slate-600 hover:scale-110 transition-transform duration-300">
                 <Recycle className="h-5 w-5 mr-2 text-slate-400" />
-                95% Recycling Rate
+                95% Recycled
               </div>
             </div>
           </div>
@@ -164,20 +165,20 @@ const HeroSection = () => {
             <div className="absolute bottom-6 left-6 w-1 h-1 bg-slate-400 rounded-full animate-pulse"></div>
             
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-semibold text-slate-900 mb-2">Get a Quote</h3>
-              <p className="text-slate-600">Professional service in minutes</p>
+              <h3 className="text-2xl font-semibold text-slate-900 mb-2">Get Quote</h3>
+              <p className="text-slate-600">Ready in 30 seconds</p>
             </div>
             
             <div className="space-y-6">
               <div className="transform hover:scale-102 transition-transform duration-200">
                 <label className="block text-sm font-medium text-slate-700 mb-3">
-                  Collection postcode?
+                  Your postcode
                 </label>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
                   <Input
                     type="text"
-                    placeholder="Enter your postcode"
+                    placeholder="e.g. SW1A 1AA"
                     value={postcode}
                     onChange={(e) => setPostcode(e.target.value)}
                     className="pl-10 h-12 text-slate-900 border-slate-200 focus:border-slate-900 focus:ring-slate-900 rounded-xl transition-all duration-300 focus:scale-102"
@@ -187,10 +188,10 @@ const HeroSection = () => {
 
               <div className="transform hover:scale-102 transition-transform duration-200">
                 <label className="block text-sm font-medium text-slate-700 mb-3">
-                  When do you need this?
+                  When?
                 </label>
                 <div className="grid grid-cols-2 gap-3">
-                  {["ASAP", "Next Few Days", "1 Week +", "Not Sure Yet"].map((option) => (
+                  {["Today", "This Week", "Next Week", "Flexible"].map((option) => (
                     <button
                       key={option}
                       onClick={() => setTiming(option)}
@@ -210,7 +211,7 @@ const HeroSection = () => {
                 onClick={handleGetQuote}
                 className="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold h-12 text-base rounded-xl transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
               >
-                Get a Quote ✨
+                Get Quote ⚡
               </Button>
             </div>
           </div>
