@@ -105,7 +105,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-sm text-slate-400">
-          <p>&copy; 2025 Clutta. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>&copy; 2025 Cluttah. All rights reserved. | Privacy Policy | Terms of Service</p>
         </div>
       </div>
     </footer>
