@@ -60,33 +60,29 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-amber-50 via-white to-emerald-50 py-16 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-200/20 rounded-full blur-3xl translate-x-32 -translate-y-32"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-orange-200/20 rounded-full blur-3xl -translate-x-24 translate-y-24"></div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-emerald-700 via-amber-700 to-orange-700 bg-clip-text text-transparent mb-4">
+    <div className="bg-white py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">
             Rubbish & Waste Removal FAQs
           </h2>
-          <p className="text-xl bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent font-bold">
+          <p className="text-xl text-slate-600 mb-4">
             Fast. Reliable. Professional.
           </p>
-          <p className="text-lg text-slate-600 mt-4">
+          <p className="text-lg text-slate-600">
             We are open 7 days a week over the telephone, email, live chat, or WhatsApp.
           </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div key={index} className="bg-slate-50 rounded-xl overflow-hidden border border-slate-100">
               <button
-                className="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+                className="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-inset"
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-slate-800 pr-4">
+                  <h3 className="text-lg font-semibold text-slate-900 pr-4">
                     {faq.question}
                   </h3>
                   {openFAQ === index ? (
@@ -98,7 +94,7 @@ const FAQSection = () => {
               </button>
               
               {openFAQ === index && (
-                <div className="px-6 pb-4">
+                <div className="px-6 pb-4 bg-white">
                   <p className="text-slate-600 leading-relaxed">
                     {faq.answer}
                   </p>
@@ -109,8 +105,8 @@ const FAQSection = () => {
         </div>
 
         {/* Contact CTA */}
-        <div className="mt-12 text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
-          <h3 className="text-2xl font-bold text-slate-800 mb-4">
+        <div className="mt-16 text-center bg-slate-50 rounded-2xl p-8 border border-slate-100">
+          <h3 className="text-2xl font-semibold text-slate-900 mb-4">
             Still have questions?
           </h3>
           <p className="text-slate-600 mb-6">
@@ -119,19 +115,19 @@ const FAQSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:08000119492" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors inline-flex items-center justify-center"
+              className="bg-slate-900 hover:bg-slate-800 text-white font-medium py-3 px-6 rounded-xl transition-colors inline-flex items-center justify-center"
             >
               📞 Call 0800 011 9492
             </a>
             <a 
               href="mailto:hi@cluttah.co.uk" 
-              className="bg-white hover:bg-slate-50 text-slate-800 font-semibold py-3 px-6 rounded-xl border border-slate-200 transition-colors inline-flex items-center justify-center"
+              className="bg-white hover:bg-slate-50 text-slate-900 font-medium py-3 px-6 rounded-xl border border-slate-200 transition-colors inline-flex items-center justify-center"
             >
               ✉️ Email Us
             </a>
             <a 
               href="https://api.whatsapp.com/send/?phone=447897023771" 
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors inline-flex items-center justify-center"
+              className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-xl transition-colors inline-flex items-center justify-center"
             >
               💬 WhatsApp
             </a>
