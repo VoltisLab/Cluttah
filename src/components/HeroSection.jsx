@@ -62,6 +62,11 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      {/* Decorative Elements */}
+      <div className="absolute top-10 left-10 w-20 h-20 bg-emerald-200/30 rounded-full blur-xl"></div>
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-orange-200/30 rounded-full blur-xl"></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-amber-200/20 rounded-full blur-lg"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Stats Bar */}
         <div className="flex justify-center items-center space-x-8 mb-12 bg-white/90 backdrop-blur-sm rounded-full py-4 px-8 mx-auto max-w-fit shadow-lg border border-orange-100">
@@ -84,10 +89,10 @@ const HeroSection = () => {
           <div className="space-y-8">
             {/* Main Heading */}
             <div>
-              <h1 className="text-6xl lg:text-7xl font-bold text-slate-800 leading-tight mb-4">
+              <h1 className="text-6xl lg:text-7xl font-bold bg-gradient-to-r from-emerald-700 via-slate-800 to-amber-700 bg-clip-text text-transparent leading-tight mb-4">
                 UK wide rubbish removal
               </h1>
-              <p className="text-xl text-slate-600 leading-relaxed">
+              <p className="text-xl text-slate-700 leading-relaxed font-medium">
                 Same-day waste removal from a business unit or home
               </p>
             </div>
@@ -99,15 +104,15 @@ const HeroSection = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div
-                  className={`p-6 border-2 rounded-xl cursor-pointer transition-all ${
+                  className={`p-6 border-2 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 ${
                     selectedService === "pile"
-                      ? "border-blue-500 bg-blue-50"
-                      : "border-slate-200 bg-white/80 hover:border-blue-300"
+                      ? "border-emerald-500 bg-gradient-to-br from-emerald-50 to-emerald-100 shadow-lg"
+                      : "border-orange-200 bg-white/80 hover:border-emerald-300 hover:shadow-md"
                   }`}
                   onClick={() => handleServiceSelect("pile")}
                 >
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-emerald-100 to-emerald-200 rounded-2xl flex items-center justify-center">
                       <img 
                         src="https://images.unsplash.com/photo-1681731059898-72407df8431a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxmdXJuaXR1cmUlMjByZW1vdmFsfGVufDB8fHx8MTc1NjkzNjQ5NXww&ixlib=rb-4.1.0&q=85" 
                         alt="Pile of Junk" 
@@ -120,15 +125,15 @@ const HeroSection = () => {
                 </div>
 
                 <div
-                  className={`p-6 border-2 rounded-xl cursor-pointer transition-all ${
+                  className={`p-6 border-2 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 ${
                     selectedService === "single"
-                      ? "border-blue-500 bg-blue-50"
-                      : "border-slate-200 bg-white/80 hover:border-blue-300"
+                      ? "border-amber-500 bg-gradient-to-br from-amber-50 to-orange-100 shadow-lg"
+                      : "border-orange-200 bg-white/80 hover:border-amber-300 hover:shadow-md"
                   }`}
                   onClick={() => handleServiceSelect("single")}
                 >
                   <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-amber-100 to-orange-200 rounded-2xl flex items-center justify-center">
                       <img 
                         src="https://images.unsplash.com/photo-1671351967814-834d376fcd1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxmdXJuaXR1cmUlMjByZW1vdmFsfGVufDB8fHx8MTc1NjkzNjQ5NXww&ixlib=rb-4.1.0&q=85" 
                         alt="Single Items" 
@@ -143,26 +148,29 @@ const HeroSection = () => {
             </div>
 
             {/* Features */}
-            <div className="flex items-center space-x-8 bg-white/80 backdrop-blur-sm rounded-xl p-4">
-              <div className="flex items-center text-sm text-slate-600">
-                <Clock className="h-5 w-5 mr-2 text-green-600" />
+            <div className="flex items-center space-x-8 bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-100">
+              <div className="flex items-center text-sm text-slate-700 font-medium">
+                <Clock className="h-5 w-5 mr-2 text-emerald-600" />
                 Same Day Service
               </div>
-              <div className="flex items-center text-sm text-slate-600">
-                <Shield className="h-5 w-5 mr-2 text-green-600" />
+              <div className="flex items-center text-sm text-slate-700 font-medium">
+                <Shield className="h-5 w-5 mr-2 text-amber-600" />
                 Fully Licensed & Insured
               </div>
-              <div className="flex items-center text-sm text-slate-600">
-                <Recycle className="h-5 w-5 mr-2 text-green-600" />
+              <div className="flex items-center text-sm text-slate-700 font-medium">
+                <Recycle className="h-5 w-5 mr-2 text-orange-600" />
                 95% Recycling Rate
               </div>
             </div>
           </div>
 
           {/* Right Side - Booking Form */}
-          <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-white/20">
+          <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl shadow-2xl border border-orange-100 relative overflow-hidden">
+            {/* Decorative gradient overlay */}
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-500 via-amber-500 to-orange-500"></div>
+            
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">Get a Quote</h3>
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-amber-700 bg-clip-text text-transparent mb-2">Get a Quote</h3>
               <p className="text-slate-600">Professional service in minutes</p>
             </div>
             
@@ -178,7 +186,7 @@ const HeroSection = () => {
                     placeholder="Enter your postcode"
                     value={postcode}
                     onChange={(e) => setPostcode(e.target.value)}
-                    className="pl-10 h-12 text-slate-900 border-slate-200 focus:border-blue-500 focus:ring-blue-500 rounded-xl"
+                    className="pl-10 h-12 text-slate-900 border-orange-200 focus:border-emerald-500 focus:ring-emerald-500 rounded-xl bg-white/80"
                   />
                 </div>
               </div>
@@ -194,8 +202,8 @@ const HeroSection = () => {
                       onClick={() => setTiming(option)}
                       className={`px-3 py-3 text-sm rounded-xl transition-all font-medium ${
                         timing === option
-                          ? "bg-blue-600 text-white"
-                          : "bg-slate-50 text-slate-700 hover:bg-blue-50 border border-slate-200"
+                          ? "bg-gradient-to-r from-emerald-600 to-amber-600 text-white shadow-lg"
+                          : "bg-gradient-to-r from-orange-50 to-amber-50 text-slate-700 hover:from-emerald-50 hover:to-amber-50 border border-orange-200"
                       }`}
                     >
                       {option}
@@ -206,9 +214,9 @@ const HeroSection = () => {
 
               <Button
                 onClick={handleGetQuote}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold h-14 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="w-full bg-gradient-to-r from-emerald-600 via-amber-600 to-orange-600 hover:from-emerald-700 hover:via-amber-700 hover:to-orange-700 text-white font-bold h-14 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                Get a Quote
+                Get a Quote ✨
               </Button>
             </div>
           </div>
