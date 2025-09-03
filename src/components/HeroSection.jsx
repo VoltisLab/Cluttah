@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { Search, Users, Truck, Star, CheckCircle, Award } from "lucide-react";
+import { Search, Users, Truck, Star, Recycle, Clock, Shield } from "lucide-react";
 import { useToast } from "../hooks/use-toast";
 
 const HeroSection = () => {
@@ -18,7 +18,7 @@ const HeroSection = () => {
     if (!selectedService) {
       toast({
         title: "Please select a service",
-        description: "Choose either 'Premium Clearance' or 'Single Items'",
+        description: "Choose either 'Pile of Junk' or 'Single Items'",
         variant: "destructive",
       });
       return;
@@ -53,110 +53,123 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 via-white to-slate-100 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div 
+      className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(135deg, rgba(239, 246, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(238, 242, 255, 0.8) 100%), url('https://images.unsplash.com/photo-1561069157-218187260215?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxnYXJiYWdlJTIwdHJ1Y2t8ZW58MHx8fHwxNzU2OTM2NDcxfDA&ixlib=rb-4.1.0&q=85')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Stats Bar */}
+        <div className="flex justify-center items-center space-x-8 mb-12 bg-white/80 backdrop-blur-sm rounded-full py-3 px-6 mx-auto max-w-fit">
+          <div className="flex items-center text-sm font-medium text-slate-700">
+            <Users className="h-4 w-4 mr-2 text-blue-600" />
+            100K Happy customers
+          </div>
+          <div className="flex items-center text-sm font-medium text-slate-700">
+            <Truck className="h-4 w-4 mr-2 text-blue-600" />
+            200,000+ Tonnes shifted
+          </div>
+          <div className="flex items-center text-sm font-medium text-slate-700">
+            <Star className="h-4 w-4 mr-2 text-blue-600" />
+            18,000+ Verified reviews
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            {/* Premium Badge */}
-            <div className="inline-flex items-center px-3 py-1 bg-slate-100 rounded-full text-sm text-slate-600">
-              <Award className="h-4 w-4 mr-2" />
-              Premium Clearance Service
-            </div>
-
             {/* Main Heading */}
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
-                UK's Premier<br />
-                <span className="text-slate-600">Clearance Service</span>
+              <h1 className="text-6xl lg:text-7xl font-bold text-slate-800 leading-tight mb-4">
+                UK wide rubbish removal
               </h1>
+              <p className="text-xl text-slate-600 leading-relaxed">
+                Same-day waste removal from a business unit or home
+              </p>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <Users className="h-5 w-5 text-slate-600 mr-2" />
-                  <span className="text-2xl font-bold text-slate-800">250K+</span>
-                </div>
-                <span className="text-slate-600 text-sm">Premium Clients</span>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <Truck className="h-5 w-5 text-slate-600 mr-2" />
-                  <span className="text-2xl font-bold text-slate-800">500K+</span>
-                </div>
-                <span className="text-slate-600 text-sm">Tonnes Cleared</span>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <Star className="h-5 w-5 text-slate-600 mr-2" />
-                  <span className="text-2xl font-bold text-slate-800">25K+</span>
-                </div>
-                <span className="text-slate-600 text-sm">5-Star Reviews</span>
-              </div>
-            </div>
-
-            {/* Subtitle */}
-            <p className="text-xl text-slate-600 leading-relaxed">
-              Experience professional clearance services with same-day availability, 
-              expert handling, and 95% recycling commitment.
-            </p>
 
             {/* Service Selection */}
             <div>
-              <h3 className="text-lg font-semibold text-slate-800 mb-4">
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">
                 What do you need help with?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div
-                  className={`p-6 border-2 rounded-lg cursor-pointer transition-all ${
-                    selectedService === "premium"
-                      ? "border-slate-800 bg-slate-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                  className={`p-6 border-2 rounded-xl cursor-pointer transition-all ${
+                    selectedService === "pile"
+                      ? "border-blue-500 bg-blue-50"
+                      : "border-slate-200 bg-white/80 hover:border-blue-300"
                   }`}
-                  onClick={() => handleServiceSelect("premium")}
+                  onClick={() => handleServiceSelect("pile")}
                 >
                   <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 bg-slate-100 rounded-lg flex items-center justify-center">
-                      <CheckCircle className="w-6 h-6 text-slate-600" />
+                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <img 
+                        src="https://images.unsplash.com/photo-1681731059898-72407df8431a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxmdXJuaXR1cmUlMjByZW1vdmFsfGVufDB8fHx8MTc1NjkzNjQ5NXww&ixlib=rb-4.1.0&q=85" 
+                        alt="Pile of Junk" 
+                        className="w-12 h-12 object-cover rounded-lg"
+                      />
                     </div>
-                    <h4 className="font-semibold text-slate-800 mb-2">Premium Clearance</h4>
-                    <p className="text-sm text-slate-600">Complete property clearance service</p>
+                    <h4 className="font-bold text-slate-800 mb-2 text-lg">Pile of Junk</h4>
+                    <p className="text-sm text-slate-600">I have a pile of rubbish</p>
                   </div>
                 </div>
 
                 <div
-                  className={`p-6 border-2 rounded-lg cursor-pointer transition-all ${
+                  className={`p-6 border-2 rounded-xl cursor-pointer transition-all ${
                     selectedService === "single"
-                      ? "border-slate-800 bg-slate-50"
-                      : "border-slate-200 bg-white hover:border-slate-300"
+                      ? "border-blue-500 bg-blue-50"
+                      : "border-slate-200 bg-white/80 hover:border-blue-300"
                   }`}
                   onClick={() => handleServiceSelect("single")}
                 >
                   <div className="text-center">
-                    <div className="w-12 h-12 mx-auto mb-3 bg-slate-100 rounded-lg flex items-center justify-center">
-                      <Truck className="w-6 h-6 text-slate-600" />
+                    <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <img 
+                        src="https://images.unsplash.com/photo-1671351967814-834d376fcd1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwyfHxmdXJuaXR1cmUlMjByZW1vdmFsfGVufDB8fHx8MTc1NjkzNjQ5NXww&ixlib=rb-4.1.0&q=85" 
+                        alt="Single Items" 
+                        className="w-12 h-12 object-cover rounded-lg"
+                      />
                     </div>
-                    <h4 className="font-semibold text-slate-800 mb-2">Single Items</h4>
-                    <p className="text-sm text-slate-600">Individual item collection</p>
+                    <h4 className="font-bold text-slate-800 mb-2 text-lg">Single Items</h4>
+                    <p className="text-sm text-slate-600">I have specific items</p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="flex items-center space-x-8 bg-white/80 backdrop-blur-sm rounded-xl p-4">
+              <div className="flex items-center text-sm text-slate-600">
+                <Clock className="h-5 w-5 mr-2 text-green-600" />
+                Same Day Service
+              </div>
+              <div className="flex items-center text-sm text-slate-600">
+                <Shield className="h-5 w-5 mr-2 text-green-600" />
+                Fully Licensed & Insured
+              </div>
+              <div className="flex items-center text-sm text-slate-600">
+                <Recycle className="h-5 w-5 mr-2 text-green-600" />
+                95% Recycling Rate
               </div>
             </div>
           </div>
 
           {/* Right Side - Booking Form */}
-          <div className="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
+          <div className="bg-white/95 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-white/20">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">Get Your Quote</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-2">Get a Quote</h3>
               <p className="text-slate-600">Professional service in minutes</p>
             </div>
             
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Collection postcode
+                  Collection postcode?
                 </label>
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-slate-400" />
@@ -165,7 +178,7 @@ const HeroSection = () => {
                     placeholder="Enter your postcode"
                     value={postcode}
                     onChange={(e) => setPostcode(e.target.value)}
-                    className="pl-10 h-12 text-slate-900 border-slate-200 focus:border-slate-800 focus:ring-slate-800"
+                    className="pl-10 h-12 text-slate-900 border-slate-200 focus:border-blue-500 focus:ring-blue-500 rounded-xl"
                   />
                 </div>
               </div>
@@ -175,14 +188,14 @@ const HeroSection = () => {
                   When do you need this?
                 </label>
                 <div className="grid grid-cols-2 gap-2">
-                  {["Today", "This Week", "Next Week", "Flexible"].map((option) => (
+                  {["ASAP", "Next Few Days", "1 Week +", "Not Sure Yet"].map((option) => (
                     <button
                       key={option}
                       onClick={() => setTiming(option)}
-                      className={`px-3 py-2 text-sm rounded-lg transition-all font-medium ${
+                      className={`px-3 py-3 text-sm rounded-xl transition-all font-medium ${
                         timing === option
-                          ? "bg-slate-800 text-white"
-                          : "bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200"
+                          ? "bg-blue-600 text-white"
+                          : "bg-slate-50 text-slate-700 hover:bg-blue-50 border border-slate-200"
                       }`}
                     >
                       {option}
@@ -193,16 +206,10 @@ const HeroSection = () => {
 
               <Button
                 onClick={handleGetQuote}
-                className="w-full bg-slate-800 hover:bg-slate-700 text-white font-medium h-12 text-lg rounded-lg"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold h-14 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
               >
-                Get Quote
+                Get a Quote
               </Button>
-              
-              <div className="text-center">
-                <p className="text-xs text-slate-500">
-                  ⚡ Same-day service • 🛡️ Fully insured • ♻️ 95% recycling
-                </p>
-              </div>
             </div>
           </div>
         </div>
