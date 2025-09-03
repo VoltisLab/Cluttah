@@ -4,28 +4,24 @@ import { Shield, CreditCard, Clock, Truck, Phone, CheckCircle } from "lucide-rea
 const WhyChooseUsSection = () => {
   const features = [
     {
-      icon: <CreditCard className="w-8 h-8 text-emerald-600" />,
+      icon: <CreditCard className="w-8 h-8 text-slate-600" />,
       title: "Fixed Pricing",
-      description: "Transparent, upfront pricing with no hidden fees",
-      gradient: "from-emerald-100 to-teal-100"
+      description: "Transparent, upfront pricing with no hidden fees"
     },
     {
-      icon: <Shield className="w-8 h-8 text-amber-600" />,
+      icon: <Shield className="w-8 h-8 text-slate-600" />,
       title: "Fully Licensed & Insured", 
-      description: "Environment Agency registered with full public liability",
-      gradient: "from-amber-100 to-orange-100"
+      description: "Environment Agency registered with full public liability"
     },
     {
-      icon: <Phone className="w-8 h-8 text-purple-600" />,
+      icon: <Phone className="w-8 h-8 text-slate-600" />,
       title: "Live Customer Support",
-      description: "7 days a week customer service and live chat support",
-      gradient: "from-purple-100 to-pink-100"
+      description: "7 days a week customer service and live chat support"
     },
     {
-      icon: <Clock className="w-8 h-8 text-cyan-600" />,
+      icon: <Clock className="w-8 h-8 text-slate-600" />,
       title: "Same Day Service",
-      description: "Book today, cleared today with our rapid response team",
-      gradient: "from-cyan-100 to-blue-100"
+      description: "Book today, cleared today with our rapid response team"
     }
   ];
 
@@ -39,65 +35,49 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-amber-50 via-white to-emerald-50 py-16 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-200/10 rounded-full blur-3xl -translate-x-48 -translate-y-48"></div>
-      <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl translate-x-32 translate-y-32"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="bg-white py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Environmental Section */}
-        <div className="text-center mb-16">
-          <div className="bg-gradient-to-r from-emerald-50 via-amber-50 to-orange-50 rounded-3xl p-12 mb-12 border-2 border-emerald-100 relative overflow-hidden">
-            {/* Decorative pattern */}
-            <div className="absolute inset-0 opacity-5">
-              <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <circle cx="5" cy="5" r="1" fill="currentColor"/>
-                  </pattern>
-                </defs>
-                <rect width="100" height="100" fill="url(#grid)"/>
-              </svg>
-            </div>
-            
-            <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-emerald-700 via-amber-700 to-orange-700 bg-clip-text text-transparent mb-8 relative z-10">
-              Reinventing the future of rubbish disposal in the UK.
+        <div className="text-center mb-20">
+          <div className="bg-slate-50 rounded-2xl p-12 mb-12 border border-slate-100">
+            <h2 className="text-4xl font-bold text-slate-900 mb-8">
+              Reinventing the future of rubbish disposal in the UK
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-              <div className="flex items-center justify-center bg-white/50 rounded-2xl p-4 hover:bg-white/70 transition-colors duration-300">
-                <Truck className="w-8 h-8 text-emerald-600 mr-3" />
-                <span className="text-lg font-bold text-slate-700">Reduced vehicle emissions</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex items-center justify-center">
+                <Truck className="w-6 h-6 text-slate-500 mr-3" />
+                <span className="text-lg font-medium text-slate-700">Reduced vehicle emissions</span>
               </div>
-              <div className="flex items-center justify-center bg-white/50 rounded-2xl p-4 hover:bg-white/70 transition-colors duration-300">
-                <svg className="w-8 h-8 text-amber-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center justify-center">
+                <svg className="w-6 h-6 text-slate-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
-                <span className="text-lg font-bold text-slate-700">We recycle and upcycle</span>
+                <span className="text-lg font-medium text-slate-700">We recycle and upcycle</span>
               </div>
-              <div className="flex items-center justify-center bg-white/50 rounded-2xl p-4 hover:bg-white/70 transition-colors duration-300">
-                <Shield className="w-8 h-8 text-orange-600 mr-3" />
-                <span className="text-lg font-bold text-slate-700">Professional & fully insured</span>
+              <div className="flex items-center justify-center">
+                <Shield className="w-6 h-6 text-slate-500 mr-3" />
+                <span className="text-lg font-medium text-slate-700">Professional & fully insured</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Why Choose Cluttah */}
-        <div className="mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-emerald-700 via-amber-700 to-orange-700 bg-clip-text text-transparent text-center mb-12">
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-slate-900 text-center mb-4">
             Why choose Cluttah?
           </h2>
           <p className="text-xl text-slate-600 text-center mb-12">
-            Reasons why 100,000 happy customers have chosen us 👇
+            Reasons why 100,000 happy customers have chosen us
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className={`w-24 h-24 mx-auto bg-gradient-to-br ${feature.gradient} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-xl`}>
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 mx-auto bg-slate-50 rounded-2xl flex items-center justify-center mb-6 border border-slate-100">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:bg-gradient-to-r group-hover:from-emerald-600 group-hover:to-amber-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">{feature.title}</h3>
                 <p className="text-slate-600">{feature.description}</p>
               </div>
             ))}
@@ -105,23 +85,20 @@ const WhyChooseUsSection = () => {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-gradient-to-r from-slate-50 via-white to-slate-50 rounded-3xl p-8 border-2 border-emerald-100 mb-16 relative overflow-hidden">
-          {/* Decorative top border */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-amber-500 to-orange-500"></div>
-          
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-emerald-700 to-amber-700 bg-clip-text text-transparent text-center mb-8">
+        <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 mb-16">
+          <h3 className="text-2xl font-semibold text-slate-900 text-center mb-8">
             What makes Cluttah different?
           </h3>
           
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div></div>
-              <div className="text-center font-bold text-slate-600 bg-slate-100 rounded-lg py-2">CLASSIC PURCHASE</div>
-              <div className="text-center font-bold bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent text-xl bg-gradient-to-r from-emerald-50 to-amber-50 rounded-lg py-2">CLUTTAH</div>
+              <div className="text-center font-medium text-slate-600 bg-white rounded-lg py-2">CLASSIC PURCHASE</div>
+              <div className="text-center font-medium text-slate-900 bg-white rounded-lg py-2">CLUTTAH</div>
             </div>
             
             {comparisonFeatures.map((feature, index) => (
-              <div key={index} className="grid grid-cols-3 gap-4 py-4 border-b border-slate-200 last:border-b-0 hover:bg-gradient-to-r hover:from-emerald-50/50 hover:to-amber-50/50 rounded-lg transition-colors duration-300">
+              <div key={index} className="grid grid-cols-3 gap-4 py-4 border-b border-slate-200 last:border-b-0">
                 <div className="text-slate-700 font-medium">{feature}</div>
                 <div className="text-center">
                   <svg className="w-6 h-6 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,7 +106,7 @@ const WhyChooseUsSection = () => {
                   </svg>
                 </div>
                 <div className="text-center">
-                  <CheckCircle className="w-6 h-6 text-emerald-500 mx-auto" />
+                  <CheckCircle className="w-6 h-6 text-green-600 mx-auto" />
                 </div>
               </div>
             ))}
@@ -137,12 +114,9 @@ const WhyChooseUsSection = () => {
         </div>
 
         {/* Company Info */}
-        <div className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 rounded-3xl p-12 text-white relative overflow-hidden">
-          {/* Decorative gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 via-amber-600/10 to-orange-600/10"></div>
-          
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+        <div className="bg-slate-900 rounded-2xl p-12 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">
               UK Based Team, Fully Compliant, Registered and Insured
             </h2>
             <p className="text-xl leading-relaxed mb-8 text-slate-200">
@@ -155,11 +129,11 @@ const WhyChooseUsSection = () => {
               one collection at a time. We are fully insured and registered with the Environment Agency: 
               we will ensure your waste is responsibly recycled.
             </p>
-            <div className="bg-gradient-to-r from-emerald-50 to-amber-50 rounded-2xl p-6 text-slate-800">
-              <p className="text-xl font-bold">
-                For an immediate quote please call our dedicated quote team on 📞{" "}
-                <a href="tel:0800 011 9492" className="bg-gradient-to-r from-emerald-600 to-amber-600 bg-clip-text text-transparent hover:from-emerald-700 hover:to-amber-700 transition-all duration-300">
-                  0800 011 9492
+            <div className="bg-white rounded-xl p-6 text-slate-900">
+              <p className="text-xl font-semibold">
+                For an immediate quote please call our dedicated quote team on{" "}
+                <a href="tel:0800 011 9492" className="text-slate-900 hover:underline">
+                  📞 0800 011 9492
                 </a>
               </p>
             </div>
