@@ -134,18 +134,18 @@ const BookingNotifications = () => {
   if (!currentNotification) return null;
 
   return (
-    <div className={`fixed bottom-6 left-6 z-50 transition-all duration-500 transform ${
+    <div className={`fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 transition-all duration-500 transform ${
       isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
     }`}>
-      <div className="bg-white/95 backdrop-blur-sm border border-slate-200 rounded-2xl shadow-2xl p-4 max-w-sm animate-bounce-subtle">
+      <div className="bg-white/95 backdrop-blur-sm border border-slate-200 rounded-2xl shadow-2xl p-4 max-w-xs md:max-w-sm animate-bounce-subtle hover:scale-105 transition-transform duration-200">
         {/* Header */}
         <div className="flex items-center mb-3">
-          <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+          <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3 animate-pulse">
             <CheckCircle className="w-5 h-5 text-green-600" />
           </div>
           <div className="flex-1">
             <div className="flex items-center">
-              <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+              <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-ping"></div>
               <span className="text-sm font-medium text-green-700">Just Booked</span>
             </div>
           </div>
@@ -153,8 +153,8 @@ const BookingNotifications = () => {
 
         {/* Content */}
         <div className="space-y-2">
-          <p className="text-slate-900 font-semibold">
-            {currentNotification.name} in {currentNotification.area}
+          <p className="text-slate-900 font-semibold text-sm md:text-base">
+            <span className="text-blue-600">{currentNotification.name}</span> in {currentNotification.area}
           </p>
           <p className="text-slate-700 text-sm">
             {currentNotification.service}
@@ -173,13 +173,13 @@ const BookingNotifications = () => {
           </div>
         </div>
 
-        {/* Progress bar */}
-        <div className="absolute bottom-0 left-0 h-1 bg-green-500 rounded-bl-2xl animate-progress"></div>
+        {/* Animated progress bar */}
+        <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-bl-2xl animate-progress"></div>
         
         {/* Close button */}
         <button 
           onClick={() => setIsVisible(false)}
-          className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors"
+          className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center text-slate-400 hover:text-slate-600 transition-colors hover:scale-110"
         >
           ×
         </button>
