@@ -29,7 +29,7 @@ const ServicesSection = () => {
       title: "Appliance Removal",
       description: "Fridges, washers, ovens",
       price: "From £54", 
-      image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MjAxfDB8MXxzZWFyY2h8M3x8cmVmcmlnZXJhdG9yfGVufDB8fHx8MTc1NjkzNzI1MHww&ixlib=rb-4.1.0&q=85",
+      image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxraXRjaGVuJTIwYXBwbGlhbmNlc3xlbnwwfHx8fDE3NTY5NDIwOTd8MA&ixlib=rb-4.1.0&q=85",
       link: "/services/single-items"
     },
     {
