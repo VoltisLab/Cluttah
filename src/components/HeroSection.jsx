@@ -54,9 +54,9 @@ const HeroSection = () => {
 
   return (
     <div 
-      className="relative bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 overflow-hidden"
+      className="relative bg-gradient-to-br from-emerald-50 via-amber-50 to-orange-100 py-16 overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(239, 246, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 25%, rgba(238, 242, 255, 0.8) 100%), url('https://images.unsplash.com/photo-1561069157-218187260215?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxnYXJiYWdlJTIwdHJ1Y2t8ZW58MHx8fHwxNzU2OTM2NDcxfDA&ixlib=rb-4.1.0&q=85')`,
+        backgroundImage: `linear-gradient(135deg, rgba(236, 253, 245, 0.9) 0%, rgba(255, 251, 235, 0.95) 25%, rgba(254, 243, 199, 0.9) 50%, rgba(255, 237, 213, 0.85) 100%), url('https://images.unsplash.com/photo-1561069157-218187260215?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwxfHxnYXJiYWdlJTIwdHJ1Y2t8ZW58MHx8fHwxNzU2OTM2NDcxfDA&ixlib=rb-4.1.0&q=85')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
